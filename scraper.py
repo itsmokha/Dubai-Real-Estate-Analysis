@@ -21,10 +21,13 @@ def scrape(url):
         pricePerSqft = int(price)/int(sqft)
         end = []
         end.append([price,sqft,rooms,bathrooms,location,pricePerSqft])
-        df = pandas.DataFrame(end)
-        return df
+        # df = pandas.DataFrame(end)
+        return end
 
-frame = scrape("https://www.bayut.com/to-rent/property/dubai/property/details-7517581.html"     )
-print(frame)
+
+if __name__ == "__main__":
+        frame = scrape("https://www.bayut.com/to-rent/property/dubai/property/details-7517581.html"     )
+        print(frame)
+
 
 # //I want to get this information.. 
